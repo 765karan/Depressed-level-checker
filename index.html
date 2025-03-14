@@ -1,157 +1,37 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Body Styling */
-  body {
-    font-family: 'Arial', sans-serif;
-    background: url('karan.depressed.jpg') no-repeat center center fixed; 
-    background-size: cover;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    padding: 0 20px;
-  }
-  
-  /* Container for centering the login and register box */
-  .login-container, .register-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    position: relative;
-  }
-  
-  /* Add a dark overlay on top of the background image */
-  .login-container::before, .register-container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
-    z-index: -1;
-  }
-  
-  /* Styling for the login and register boxes */
-  .login-box, .register-box {
-    background: rgba(255, 255, 255, 0.9); /* Slight opacity to see the background image */
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    width: 100%;
-    max-width: 400px;
-    transition: all 0.3s ease;
-  }
-  
-  .login-box:hover, .register-box:hover {
-    transform: translateY(-10px); /* Hover effect to lift the box */
-  }
-  
-  h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
-    font-size: 28px;
-    font-weight: 600;
-  }
-  
-  /* Styling for input fields */
-  .textbox {
-    margin-bottom: 20px;
-  }
-  
-  .textbox input {
-    width: 100%;
-    padding: 12px;
-    border: 2px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-    outline: none;
-    transition: border-color 0.3s ease;
-  }
-  
-  .textbox input:focus {
-    border-color: #2575fc; /* Blue border on focus */
-  }
-  
-  .textbox input::placeholder {
-    color: #888;
-  }
-  
-  /* Styling for Remember Me checkbox */
-  .remember-me {
-    margin-bottom: 20px;
-    font-size: 14px;
-    color: #333;
-  }
-  
-  .remember-me input {
-    margin-right: 8px;
-    transform: scale(1.2);
-  }
-  
-  /* Button Styling */
-  .btn-container {
-    text-align: center;
-  }
-  
-  .btn {
-    width: 100%;
-    padding: 12px;
-    background-color: #2575fc;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-  
-  .btn:hover {
-    background-color: #6a11cb; /* Hover effect color change */
-    transform: translateY(-5px); /* Slight lift effect */
-  }
-  
-  .btn:active {
-    transform: translateY(2px); /* Button press effect */
-  }
-  
-  /* Footer Links Styling */
-  .footer-links {
-    text-align: center;
-    margin-top: 10px;
-  }
-  
-  .footer-links a {
-    color: #2575fc;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 600;
-  }
-  
-  .footer-links a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Custom Styling for Register Page */
-  .register-box p {
-    text-align: center;
-    color: #555;
-  }
-  
-  .register-box .footer-links a {
-    color: #2575fc;
-  }
-  
-  .register-box .footer-links a:hover {
-    text-decoration: underline;
-  }
-  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Register Page</title>
+  <link rel="stylesheet" href="register.css">
+</head>
+<body>
+  <div class="register-container">
+    <div class="register-box">
+      <h2>Register</h2>
+      <form action="#" method="POST">
+        <div class="textbox">
+          <input type="text" placeholder="Username" name="username" required>
+        </div>
+        <div class="textbox">
+          <input type="email" placeholder="Email" name="email" required>
+        </div>
+        <div class="textbox">
+          <input type="password" placeholder="Password" name="password" required>
+        </div>
+        <div class="textbox">
+          <input type="password" placeholder="Confirm Password" name="confirm_password" required>
+        </div>
+        <div class="btn-container">
+          <a href="index.html">Sign In</a>
+        </div>
+        <div class="footer-links">
+          <p>Already have an account? <a href="login.html">Login here</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
